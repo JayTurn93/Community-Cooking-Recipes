@@ -1,0 +1,37 @@
+:root{
+    --Yellow: #ffcb65;
+    --Brown: #763c00;
+    --White: #ffffff;
+    --Blue: #87A1BF;
+    --Purple: #464376;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* Navigation */
+
+nav{
+    background-color: var(--Brown);
+
+}
+.theicons{
+display: flex;
+flex-direction: row;
+
+}
+.theicons > div {
+    margin: 0.5rem;
+}
+
+/* Body */
+main{
+    background-color: var(--Yellow);
+
+}
+/* Footer */
+footer{
+    background-color: var(--Brown);
+}
+
+
