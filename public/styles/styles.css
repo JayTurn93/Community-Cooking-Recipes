@@ -13,25 +13,60 @@
 
 nav{
     background-color: var(--Brown);
+    height: 5rem;
 
 }
 .theicons{
 display: flex;
 flex-direction: row;
-
+justify-content: space-around;
 }
 .theicons > div {
     margin: 0.5rem;
 }
+h1{
+    
+}
 
 /* Body */
-main{
+body{
     background-color: var(--Yellow);
 
 }
 /* Footer */
 footer{
     background-color: var(--Brown);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 5rem;
+    
 }
 
+/* Body */
+main{
+    margin: auto;
+}
 
+.bigbox{
+    display: flex;
+    width: 70%;
+    height: 30rem;
+    background-color: var(--Brown);
+    margin: 3rem auto;
+    border-radius: 1rem;
+}
+
+.smallcontainer{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.smallrectangle{
+    width: 30%;
+    height: 20rem;
+    background-color: var(--Brown);
+    border-radius: 1rem;
+    margin: 3rem;
+}
