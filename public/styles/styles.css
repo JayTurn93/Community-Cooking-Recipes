@@ -25,12 +25,17 @@ justify-content: space-around;
     margin: 0.5rem;
 }
 h1{
-    
+    font-family: Poppins;
+    text-align: center;
 }
 
 /* Body */
 body{
     background-color: var(--Yellow);
+    font-family: Poppins;
+    a:hover {
+        color: var(--Blue);
+    }
 
 }
 /* Footer */
@@ -50,6 +55,8 @@ main{
 
 .bigbox{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 70%;
     height: 30rem;
     background-color: var(--Brown);
@@ -62,6 +69,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 3rem auto;
 }
 .smallrectangle{
     width: 30%;
@@ -69,4 +77,27 @@ main{
     background-color: var(--Brown);
     border-radius: 1rem;
     margin: 3rem;
+}
+
+/* Classes */
+h2 {
+    text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .smallcontainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .smallrectangle {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
 }
