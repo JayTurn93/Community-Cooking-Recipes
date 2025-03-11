@@ -79,6 +79,70 @@ main{
     margin: 3rem;
 }
 
+/*Input Fields*/
+.inputbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    height: 30rem;
+    background-color: var(--Brown);
+    margin: 3rem auto;
+    border-radius: 1rem;
+}
+.formarrange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+    width: auto;
+}
+.login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+label {
+    flex-direction: column;
+    padding: 0.3em; 
+    
+}
+input {
+    /* width: 18rem; */
+    flex-direction: column;
+    
+    
+}
+.submitbutton {
+    width: 5rem;
+    height: 1.5em;
+    margin: auto;
+
+}
+
+/* Explore Page  */
+.ingredientSelection {
+    display: inline-block;
+}
+.ingredientBox {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 70%;
+    height: 30rem;
+    background-color: var(--Brown);
+    margin: 3rem auto;
+    border-radius: 1rem;
+    padding: 1em;
+}
+.exploreOptions {
+    display: inline-block;
+}
 /* Classes */
 h2 {
     text-align: center;

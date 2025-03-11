@@ -4,21 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css"  href="./public/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ee25fb34fa.js" crossorigin="anonymous">
     </script>
     <title>Explore Recipes</title>
 </head>
 <nav>
     <div class="theicons">
-        <div>HOME</div>
-        <div>Account</i></div>
-        <div>Search Recipes</i></div>
+        <div><a href="./cc-index.html">HOME</a></div>
+        <div><a href="./cc-login.html">Account</a></div>
+        <div><a href="./cc-explore.html">Search Recipes</a></div>
         <h1>Community Cooking</h1>
     </div>
 </nav>
 <body>
     <main>
-        <div class="bigbox"><p>More</p></div>
+        <div class="ingredientBox">
+            <div class="ingredientSelection">
+                <span>
+                    <h3>Proteins</h3>
+                    <form action="#">
+                    <input type="checkbox" name="protein1" id="protein1" value="Chicken">
+                    <label for="protein1">Chicken</label> <br>
+                    <input type="checkbox" name="protein2" id="protein2" value="Ground Beef">
+                    <label for="protein2">Ground Beef</label> <br>
+                    <input type="checkbox" name="protein3" id="protein3" value="Pork Chops">
+                    <label for="protein3">Pork Chops</label> <br>
+                    </form>
+                </span>
+                <span>
+                    <h3>Vegetables</h3>
+                    <form action="##">
+                        <input type="checkbox" name="vegetable1" id="vegetable1" value="Broccoli">
+                        <label for="vegetable1">Broccoli</label> <br>
+                        <input type="checkbox" name="vegetable2" id="vegetable2" value="Peppers">
+                        <label for="vegetable2">Peppers</label> <br>
+                        <input type="checkbox" name="vegetable3" id="vegetable3" value="Onions">
+                        <label for="vegetable3">Onions</label>
+                    </form>
+                </span>
+            </div>
+        </div>
         <div class="smallcontainer">
             <div class="smallrectangle">More</div>
             <div class="smallrectangle"></div>
