@@ -56,7 +56,7 @@ main{
 .bigbox{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     width: 70%;
     height: 30rem;
     background-color: var(--Brown);
@@ -77,6 +77,8 @@ main{
     background-color: var(--Brown);
     border-radius: 1rem;
     margin: 3rem;
+    display: flex;
+    flex-direction: column;
 }
 
 /*Input Fields*/
@@ -124,10 +126,44 @@ input {
     margin: auto;
 
 }
+/* Login Page */
+
+.profile-img {
+    width: 5em;
+    height: 5em;
+}
+.profilearea {
+    /* justify-content: center; */
+    width: 80%;
+    height: 30rem;
+    background-color: var(--Brown);
+    margin: 3rem auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.profileleft {
+    width: auto;
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.profileright {
+    flex-direction: row;
+    width: auto;
+    padding-left: 3rem;
+}
+.aboutuser {
+    
+}
+
 
 /* Explore Page  */
 .ingredientSelection {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
 }
 .ingredientBox {
     display: flex;
@@ -147,6 +183,13 @@ input {
 h2 {
     text-align: center;
 }
+button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .smallcontainer {
@@ -155,6 +198,7 @@ h2 {
     }
     .smallrectangle {
         width: auto;
+        
     }
 }
 
