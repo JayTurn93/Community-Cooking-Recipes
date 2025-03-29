@@ -12,6 +12,7 @@
 /* Navigation */
 
 nav{
+    display: flex;
     background-color: var(--Brown);
     height: 5rem;
 
@@ -56,9 +57,9 @@ main{
 .bigbox{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    width: 70%;
-    height: 30rem;
+    justify-content: center;
+    width: auto;
+    height: auto;
     background-color: var(--Brown);
     margin: 3rem auto;
     border-radius: 1rem;
@@ -109,23 +110,25 @@ main{
     height: auto;
     margin: auto;
 }
-label {
-    flex-direction: column;
-    padding: 0.3em; 
-    
-}
-input {
-    /* width: 18rem; */
-    flex-direction: column;
-    
-    
-}
+
+
 .submitbutton {
     width: 5rem;
-    height: 1.5em;
-    margin: auto;
+    height: em;
+    /* margin: auto; */
 
 }
+
+label {
+    display: inline-block;
+    width: 7em;
+    text-align: right;
+}
+.recipeinput {
+    padding: 1em;
+    justify-content: center;
+}
+
 /* Login Page */
 
 .profile-img {
@@ -157,13 +160,32 @@ input {
     
 }
 
-
+.forgotpassword {
+    /* align-content: flex-end; */
+    margin: auto;
+    font-size: small;
+}
+/*Create Page*/
+.bigtextarea {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+textarea {
+    resize: none;
+}
+.multibutton {
+    
+}
 /* Explore Page  */
 .ingredientSelection {
     display: flex;
     flex-wrap: wrap;
     
     
+}
+.explore {
+    text-align: left;
 }
 .ingredientBox {
     display: flex;
@@ -200,10 +222,75 @@ button {
         width: auto;
         
     }
-}
+    .login {
+        flex-direction: column;
+    }
+    .forgotpassword {
+        font-size: x-small;
+    }
+    .smallnav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .icon {
+        padding: 3em;
+    }
+    .theicons {
+        display: none;
+    }
 
+    .ingredientBox {
+        height: auto;
+    }
+    .profilearea {
+        width: auto;
+        padding-top: 1em;
+    }
+    .largefoot {
+        display: none;
+    }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
+    .smallcontainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .smallrectangle {
+        width: auto;
+        
+    }
+    .login {
+        flex-direction: column;
+    }
+    .forgotpassword {
+        font-size: medium;
+    }
+    .smallnav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .icon {
+        padding: 7em;
+    }
+    .theicons {
+        display: none;
+    }
+
+    .ingredientBox {
+        height: auto;
+    }
+    .profilearea {
+        width: auto;
+        padding-top: 1em;
+    }
+    .largefoot {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {

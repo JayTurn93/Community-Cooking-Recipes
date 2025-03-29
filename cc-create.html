@@ -4,28 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css"  href="./public/styles/styles.css">
-    <script src="https://kit.fontawesome.com/ee25fb34fa.js" crossorigin="anonymous">
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ee25fb34fa.js" crossorigin="anonymous"></script>
     <title>Create Recipe</title>
 </head>
 <nav>
+    <div class="smallnav">
+        <div class="icon"><a href="./cc-index.html"><i class="fa-solid fa-house-chimney fa-2xl"></i></a></div>
+        <div class="icon"><a href="./cc-login.html"><i class="fa-solid fa-user fa-2xl"></i></a></div>
+        <div class="icon"><a href="./cc-explore.html"><i class="fa-solid fa-fire-burner fa-2xl"></i></a></div>
+    </div>
     <div class="theicons">
         <div><a href="./cc-index.html">HOME</a></div>
         <div><a href="./cc-login.html">Account</a></div>
-        <div><a href="./cc-explore.html"></a>Search Recipes</div>
-        <!-- <h1>Community Cooking</h1> -->
+        <div><a href="./cc-explore.html">Search Recipes</a></div>
     </div>
 </nav>
 <body>
     <main>
-
+        <h2>Create New Recipe</h2>
+        <div class="bigbox">
+            <form>
+                <div class="recipeinput">
+                    <label for="">Recipe Name: </label>
+                    <input type="text" name="" id="" placeholder="">
+                </div>
+                <div class="recipeinput">
+                    <label for="">Prep Time: </label>
+                    <input type="text" name="" id="" placeholder="">
+                </div>
+                <div class="recipeinput">
+                    <label for="recipeinput">Cook Time: </label>
+                    <input type="text" name="" id="" placeholder="">
+                </div>
+                <div class="bigtextarea">
+                    <label for="">Ingredients: </label>
+                    <textarea name="" id="" rows="7" cols="75"></textarea>
+                </div>
+                <div class="bigtextarea">
+                    <label for="">Instructions: </label>
+                    <textarea name="" id="" rows="7" cols="75"></textarea>
+                </div>
+                <div class="bigtextarea">
+                    <label for="">Notes: </label>
+                    <textarea name="" id="" rows="7" cols="75"></textarea>
+                </div>
+                <button>Submit</button>
+            </form>
+            <div>
+                <button>Upload Photo</button>
+            </div>
+        </div>
     </main>
 </body>
 <footer>
-    <div>Home</div>
-    <div>About</div>
-    <div>Connect</div>
-    <div>Contact</div>
-
+    <div class="smallnav">
+        <div class="icon">
+            <a href="./cc-index.html"><i class="fa-solid fa-house-chimney fa-2xl"></i></a>
+        </div>
+        <div class="icon">
+            <a href="gcdcflag185@hotmail.com"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+        </div>
+    </div>
+    <div class="largefoot">
+        <div>Home</div>
+        <div>About</div>
+        <div>Connect</div>
+        <div>Contact</div>
+    </div>
 </footer>
 </html>
