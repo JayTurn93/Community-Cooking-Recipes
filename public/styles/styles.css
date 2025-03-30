@@ -1,9 +1,9 @@
 :root{
-    --Yellow: #ffcb65;
-    --Brown: #763c00;
+    --Green: #7fb069;
+    --Brown: #ece4b7;
     --White: #ffffff;
-    --Blue: #87A1BF;
-    --Purple: #464376;
+    --Orange: #e6aa68;
+    --Red: #d36135;
 }
 *{
     box-sizing: border-box;
@@ -15,15 +15,17 @@ nav{
     display: flex;
     background-color: var(--Brown);
     height: 5rem;
+    border-radius: 1rem;
 
 }
 .theicons{
 display: flex;
 flex-direction: row;
-justify-content: space-around;
+justify-content: space-between;
 }
 .theicons > div {
-    margin: 0.5rem;
+    padding: 2rem;
+    margin: auto;
 }
 h1{
     font-family: Poppins;
@@ -32,10 +34,10 @@ h1{
 
 /* Body */
 body{
-    background-color: var(--Yellow);
+    background-color: var(--Green);
     font-family: Poppins;
     a:hover {
-        color: var(--Blue);
+        color: var(--Orange);
     }
 
 }
@@ -46,6 +48,7 @@ footer{
     flex-direction: row;
     justify-content: space-evenly;
     height: 5rem;
+    border-radius: 1rem;
     
 }
 
@@ -294,5 +297,13 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
-
+    .theicons {
+        display: contents;
+    }
+    .smallnav {
+        display: none;
+    }
+    .largefoot {
+        display: contents;
+    }
 }
