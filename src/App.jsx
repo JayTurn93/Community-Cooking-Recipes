@@ -15,9 +15,9 @@ function App() {
       <Create />
       <Explore />
       <Home />
-      <Login user={user} />
+      <Login user={user} setUser={setUser}/>
       <UserProfile user={user} />
-      <Signup user={user} />
+      <Signup user={user} setUser={setUser} />
     </>
   )
 }
