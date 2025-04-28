@@ -9,3 +9,7 @@ STAY TUNED!!
 --April 16, 2025 
 We've add input functionality to login and signup page (new addition). Currently working on a data for recipes. 
 Functionality to add recipes coming soon after data is created!
+
+## Update  
+--April 27, 2025
+Added styling, added some recipes. Working on checkboxes!

@@ -1,4 +1,16 @@
+import { useState, useEffect } from "react";
+
 function Explore() {
+    const [protein, setProtein] = useState(null);
+    const [vegetable, setVegetable] = useState(null);
+    const [isChecked, setIsChecked] = useState(false);
+    const handleCheckboxChange = (e) => {
+        setIsChecked(!isChecked);
+    };
+
+    
+
+    console.log(isChecked)
     return (
         <div>
             <h2>Search Recipes</h2>
@@ -6,13 +18,13 @@ function Explore() {
                     <div className="ingredientSelection">
                         <span>
                             <h3>Proteins</h3>
-                            <form action="#">
-                                <input type="checkbox" name="protein1" id="protein1" value="Chicken"/>
+                            <form action="#" checked={isChecked} onChange={handleCheckboxChange}>
+                                <input type="checkbox" name="protein" id="protein" value="Chicken"/>
                                 <label className="explore" htmlFor="protein1">Chicken</label> 
-                                <input type="checkbox" name="protein2" id="protein2" value="Ground Beef"/>
+                                <input type="checkbox" name="protein" id="protein" value="Ground Beef"/>
                                 <label className="explore" htmlFor="protein2">Ground Beef</label> 
-                                <input type="checkbox" name="protein3" id="protein3" value="Pork Chops"/>
-                                <label className="explore" htmlFor="protein3">Pork Chops</label> 
+                                <input type="checkbox" name="protein" id="protein" value="Steak"/>
+                                <label className="explore" htmlFor="protein3">Steak</label> 
                             </form>
                         </span>
                         <span>
