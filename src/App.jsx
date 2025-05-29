@@ -10,6 +10,8 @@ import Header from './shared/Header'
 import Footer from './shared/Footer'
 import { Route, Routes } from 'react-router-dom';
 
+
+
 function App() {
   const [user, setUser] = useState("")
 
@@ -17,7 +19,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/create" element={<Create />} />
+        <Route path="/create" element={<Create user={user} setUser={setUser} />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/" element={<Home  />} />
         <Route path="/login" element={<Login user={user} setUser={setUser}/>} />

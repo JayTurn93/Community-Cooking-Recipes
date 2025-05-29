@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function Login({user, setUser}) {
     const [password, setPassword] = useState("");
 
@@ -19,7 +20,7 @@ function Login({user, setUser}) {
     
   }
     return (
-        <div>
+        <>
             <h1>Community Cooking</h1>
             <div className="inputbox">
                 <h2>Account Login</h2>
@@ -38,7 +39,7 @@ function Login({user, setUser}) {
                     </form>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

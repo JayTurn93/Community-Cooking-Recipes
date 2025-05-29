@@ -1,4 +1,315 @@
-:root {
+:root{
+    --Green: #7fb069;
+    --Brown: #ece4b7;
+    --White: #ffffff;
+    --Orange: #e6aa68;
+    --Red: #d36135;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* Navigation */
+
+nav{
+    display: flex;
+    background-color: var(--Brown);
+    height: 5rem;
+    border-radius: 1rem;
+
+}
+.theicons{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.theicons > div {
+    padding: 2rem;
+    margin: auto;
+}
+h1{
+    font-family: Poppins;
+    text-align: center;
+}
+
+/* Body */
+body{
+    background-color: var(--Green);
+    font-family: Poppins;
+    a:hover {
+        color: var(--Orange);
+    }
+
+}
+/* Footer */
+footer{
+    background-color: var(--Brown);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 5rem;
+    border-radius: 1rem;
+    
+}
+
+/* Body */
+main{
+    margin: auto;
+}
+
+.bigbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    background-color: var(--Brown);
+    margin: 3rem auto;
+    border-radius: 1rem;
+}
+
+.smallcontainer{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3rem auto;
+}
+.smallrectangle{
+    width: 30%;
+    height: 20rem;
+    background-color: var(--Brown);
+    border-radius: 1rem;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Input Fields*/
+.inputbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    height: 30rem;
+    background-color: var(--Brown);
+    margin: 3rem auto;
+    border-radius: 1rem;
+}
+.formarrange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+    width: auto;
+}
+.login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+
+.submitbutton {
+    width: 5rem;
+    height: em;
+    /* margin: auto; */
+
+}
+
+label {
+    display: inline-block;
+    width: 7em;
+    text-align: right;
+}
+.recipeinput {
+    padding: 1em;
+    justify-content: center;
+}
+
+/* Login Page */
+
+.profile-img {
+    width: 5em;
+    height: 5em;
+}
+.profilearea {
+    /* justify-content: center; */
+    width: 80%;
+    height: 30rem;
+    background-color: var(--Brown);
+    margin: 3rem auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.profileleft {
+    width: auto;
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.profileright {
+    flex-direction: row;
+    width: auto;
+    padding-left: 3rem;
+}
+.aboutuser {
+    
+}
+
+.forgotpassword {
+    /* align-content: flex-end; */
+    margin: auto;
+    font-size: small;
+}
+/*Create Page*/
+.bigtextarea {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+textarea {
+    resize: none;
+}
+.multibutton {
+    
+}
+/* Explore Page  */
+.ingredientSelection {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+.explore {
+    text-align: left;
+}
+.ingredientBox {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    width: 70%;
+    height: 30rem;
+    background-color: var(--Brown);
+    margin: 3rem auto;
+    border-radius: 1rem;
+    padding: 1em;
+}
+.exploreOptions {
+    display: inline-block;
+}
+/* Classes */
+h2 {
+    text-align: center;
+}
+button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .smallcontainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .smallrectangle {
+        width: auto;
+        
+    }
+    .login {
+        flex-direction: column;
+    }
+    .forgotpassword {
+        font-size: x-small;
+    }
+    .smallnav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .icon {
+        padding: 3em;
+    }
+    .theicons {
+        display: none;
+    }
+
+    .ingredientBox {
+        height: auto;
+    }
+    .profilearea {
+        width: auto;
+        padding-top: 1em;
+    }
+    .largefoot {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .smallcontainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .smallrectangle {
+        width: auto;
+        
+    }
+    .login {
+        flex-direction: column;
+    }
+    .forgotpassword {
+        font-size: medium;
+    }
+    .smallnav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .icon {
+        padding: 7em;
+    }
+    .theicons {
+        display: none;
+    }
+
+    .ingredientBox {
+        height: auto;
+    }
+    .profilearea {
+        width: auto;
+        padding-top: 1em;
+    }
+    .largefoot {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .theicons {
+        display: contents;
+    }
+    .smallnav {
+        display: none;
+    }
+    .largefoot {
+        display: contents;
+    }
+}
+
+
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +376,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

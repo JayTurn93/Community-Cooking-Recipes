@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import recipes from "../data/recipes"
 
+
 function Home() {
     const [newerRecipe, setNewerRecipe] = useState([]);
     const [discussedRecipe, setDiscussedRecipe] = useState([]);
@@ -23,7 +24,9 @@ function Home() {
         <div>
             <h1>Community Cooking Recipes</h1>
             <div className="bigbox">
-                <h2>Community Bulletin</h2>
+                <div>
+                    <h2>Community Bulletin</h2>
+                </div>
                 <p>Welcome to Community Cooking Recipes. Here all the recipes are user submitted, rated, and discussed. Check out whats new below!</p>
                 <span>
                     <ul key={newerRecipe.id}>
