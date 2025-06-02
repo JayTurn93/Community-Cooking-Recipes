@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
@@ -9,9 +9,9 @@ function Header() {
             <div class="icon"><a href="./cc-explore.html"><i class="fa-solid fa-fire-burner fa-2xl"></i></a></div>
         </div>
         <div class="theicons">
-            <div><a href="./cc-index.html">HOME</a></div>
-            <div><a href="./cc-login.html">Account</a></div>
-            <div><a href="./cc-explore.html">Search Recipes</a></div>
+            <div><Link to="/">Home</Link></div>
+            <div><Link to="Login">Account</Link></div>
+            <div><Link to="Explore">Search Recipes</Link></div>
         </div>
         </div>
     )

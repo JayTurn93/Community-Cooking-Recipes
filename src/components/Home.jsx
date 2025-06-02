@@ -27,7 +27,9 @@ function Home() {
                 <div>
                     <h2>Community Bulletin</h2>
                 </div>
+                <div>
                 <p>Welcome to Community Cooking Recipes. Here all the recipes are user submitted, rated, and discussed. Check out whats new below!</p>
+                </div>
                 <span>
                     <ul key={newerRecipe.id}>
                         {newerRecipe.map((aRecipe) => 
