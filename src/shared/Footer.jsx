@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 function Footer() {
@@ -13,10 +14,10 @@ function Footer() {
             </div>
             <div className="largefoot">
                 <div>
-                    <a href="./cc-index.html">Home</a>
+                    <div><Link to="/">Home</Link></div>
                 </div>
                 <div>
-                    <a href="gcdcflag185@hotmail.com">Contact</a>
+                    <div><Link to="/contact">Contact</Link></div>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 function Login({user, setUser}) {
     const [password, setPassword] = useState("");
 
-    console.log("logintest", user);
+    // console.log("logintest", user);
 
     const handleUserChange = (e) => {
       e.preventDefault()

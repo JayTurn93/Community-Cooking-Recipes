@@ -13,20 +13,26 @@
 
 nav{
     display: flex;
+    justify-content: space-evenly;
     background-color: var(--Brown);
-    height: 5rem;
+    height: auto;
     border-radius: 1rem;
+    padding: 2em;
 
 }
 .theicons{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 3em;
+    font-size: 2rem;
+
 }
-.theicons > div {
+/* .theicons > div {
+    justify-content: space-evenly;
     padding: 2rem;
     margin: auto;
-}
+} */
 h1{
     font-family: Poppins;
     text-align: center;
@@ -297,9 +303,7 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
-    .theicons {
-        display: contents;
-    }
+    
     .smallnav {
         display: none;
     }

@@ -2,16 +2,7 @@ import { useState, useEffect } from "react";
 
 
 function Explore() {
-    const [protein, setProtein] = useState(null);
-    const [vegetable, setVegetable] = useState(null);
-    const [isChecked, setIsChecked] = useState(false);
-    const handleCheckboxChange = (e) => {
-        setIsChecked(!isChecked);
-    };
-
     
-
-    console.log(isChecked)
     return (
         <div>
             <h2>Search Recipes</h2>
