@@ -190,8 +190,7 @@ textarea {
 .ingredientSelection {
     display: flex;
     flex-wrap: wrap;
-    
-    
+    margin: auto;
 }
 .explore {
     text-align: left;
@@ -207,6 +206,7 @@ textarea {
     border-radius: 1rem;
     padding: 1em;
 }
+
 .exploreOptions {
     display: inline-block;
 }

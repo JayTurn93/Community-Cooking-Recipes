@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <div>
-            <div className="nav">
-                <div class="smallnav">
-                    <div class="icon"><a href="./cc-index.html"><i class="fa-solid fa-house-chimney fa-2xl"></i></a></div>
-                    <div class="icon"><a href="./cc-login.html"><i class="fa-solid fa-user fa-2xl"></i></a></div>
-                    <div class="icon"><a href="./cc-explore.html"><i class="fa-solid fa-fire-burner fa-2xl"></i></a></div>
-                </div>
-            </div>
             <nav>
+                <div class="smallnav">
+                    <div class="icon"><Link to="/"><i class="fa-solid fa-house-chimney fa-2xl"></i></Link></div>
+                    <div class="icon"><Link to="Login"><i class="fa-solid fa-user fa-2xl"></i></Link></div>
+                    <div class="icon"><Link to="Explore"><i class="fa-solid fa-fire-burner fa-2xl"></i></Link></div>
+                </div>
                 <div className="theicons">
                     <Link to="/">Home </Link>
                     <Link to="Login">Account </Link>
