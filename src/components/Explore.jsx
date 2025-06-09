@@ -3,20 +3,24 @@ import recipes from  "../data/recipes";
 
 
 function Explore() {
-    const [ingredient, setIngredient] = useState("");
+    const [ingredient, setIngredient] = useState([""]);
     const [foundRecipes, setFoundRecipes] = useState(recipes);
+    console.log(ingredient)
 
     const filter = (e) => {
         const keyword = e.target.value;
+        const terms = keyword.split(",")
         if (keyword !== "") {
             const results = recipes.filter((recipe) => {
-                return recipe.name.toLowerCase().startsWith(keyword.toLowerCase());
+                return recipe.ingredients.toLowerCase().includes(keyword.toLowerCase());
             })
             setFoundRecipes(results);
         } else {
             setFoundRecipes(recipes);
         }
-        setIngredient(keyword)
+        
+        setIngredient(terms)
+        
     }
 
     return (
@@ -31,6 +35,17 @@ function Explore() {
             <div className="smallcontainer">
                 <div className="smallrectangle">
                     <h2>Recipe Results</h2>
+                    <div className="recipe-results">
+                        {foundRecipes && foundRecipes.length > 0 ? (
+                          foundRecipes.map((recipe) =>(
+                            <li key={recipe._id} className="recipe">
+                                <span className="recipe-name">{recipe.name}</span>
+                            </li>
+                          ))
+                        ) : (
+                            <p>Nothing Cooking Here</p>
+                        )}
+                    </div>
                 </div>
                 <div className="smallrectangle">
                         <h2>Other Ideas</h2>
