@@ -10,6 +10,7 @@ import Header from './shared/Header';
 import Footer from './shared/Footer';
 import Contact from './components/Contact';
 import { Route, Routes } from 'react-router-dom';
+import ViewRecipe from './components/ViewRecipe';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/profile" element={<UserProfile user={user} />} />
         <Route path="/signup" element={<Signup user={user} setUser={setUser} />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/viewrecipe" element={<ViewRecipe />} />
       </Routes>
       <Footer />
     </>

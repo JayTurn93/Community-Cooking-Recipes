@@ -1,13 +1,18 @@
-
+import { useState } from "react";
 
 function UserProfile() {
+    const [profilePhoto, setProfilePhoto] = useState();
+    const photoSelection = (e) => {
+        setProfilePhoto(URL.createObjectURL(e.target.files[0]))
+    }
+
     return (
         <div>
              <div className="profilearea">
                 <h3>Account Settings</h3>
                 <span className="profileleft">
-                    <img className="profile-img" src="./public/photos/default-profile-picture-avatar-user-avatar-icon-person-icon-head-icon-profile-picture-icons-default-anonymous-user-male-and-female-businessman-photo-placeholder-social-network-avatar-portrait-free-vector-1343007401.jpg" alt="Profile Picture"/>
-                    <button>Edit Photo</button>
+                    <img className="profile-img" src={profilePhoto}/>
+                    <input type="file" onChange={photoSelection} />
                 </span>
                     <span className="profileright">
                         <span className="aboutuser">
