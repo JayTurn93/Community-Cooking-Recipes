@@ -10,7 +10,7 @@ function Home() {
         fetch(`${API_BASE_URL}/api/recipes`, {method: "GET"})
             .then(response => response.json())
             .then((data) => {
-                const recipes = data.recipes
+                const recipes = data.data.recipes
                 setRecipeCollection(recipes);
                 })
                 .catch(console.error)
