@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate  } from "react-router-dom";
 
 
 function Login({user, setUser}) {
     const [password, setPassword] = useState("");
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const navigate = useNavigate();
 
     // console.log("logintest", user);
 
@@ -17,6 +20,15 @@ function Login({user, setUser}) {
   const handleSubmitLogin = (e) => {
     e.preventDefault()
     console.log("trying to",user, password);
+    const body = {
+        user: e.target.user,
+        password: e.target.user
+    }
+    JSON.stringify(body)
+    fetch(`${API_BASE_URL}/auth/login/local`, {method: "POST"})
+    .then(localStorage.setItem("user", JSON.stringify(user)))
+    .then(navigate("/admin"))
+    .catch(console.error)
     
   }
     return (

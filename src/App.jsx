@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css';
 import Create from './components/Create';
 import Home from './components/Home';
-import UserProfile from './components/UserProfile';
+import Admin from './components/Admin';
 import Login from './components/Login';
 import Explore from "./components/Explore";
 import Signup from './components/Signup';
@@ -25,7 +25,7 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/" element={<Home  />} />
         <Route path="/login" element={<Login user={user} setUser={setUser}/>} />
-        <Route path="/profile" element={<UserProfile user={user} />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/signup" element={<Signup user={user} setUser={setUser} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/viewrecipe" element={<ViewRecipe />} />

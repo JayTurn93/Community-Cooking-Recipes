@@ -48,10 +48,11 @@ function Create() {
         instructions: e.target.instructions.value,
         notes: e.target.notes.value
       }
+      
       fetch(`${API_BASE_URL}/api/recipes/create/new`, {method: "POST"})
-      .then(JSON.stringify(body))
-      .then(navigate, ("/Home"))
-      .catch(console.error)
+        .then(JSON.stringify(body))
+        .then(navigate, ("/Home"))
+        .catch(console.error)
       
     }
 
@@ -59,7 +60,7 @@ function Create() {
         <div>
         <h2>Create New Recipe</h2>
         <div className="bigbox">
-            <form onSubmit={handleSubmitRecipe}>
+            <form onSubmit={handleSubmitRecipe} method="post">
                 <div className="recipeinput">
                     <label htmlFor="">Recipe Name: </label>
                     <input type="text" name="" id="" placeholder="" required  onChange={handleRecipeNameChange}/>
@@ -84,12 +85,8 @@ function Create() {
                     <label htmlFor="">Notes: </label>
                     <textarea name="" id="" rows="7" cols="75" onChange={handleNotesChange}></textarea>
                 </div>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
-            <div>
-                <button >Upload Photo</button>
-                <input type="file" name="" id=""  />
-            </div>
         </div>
     </div>
     )
