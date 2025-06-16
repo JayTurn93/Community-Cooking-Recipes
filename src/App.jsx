@@ -6,6 +6,7 @@ import Admin from './components/Admin';
 import Login from './components/Login';
 import Explore from "./components/Explore";
 import Signup from './components/Signup';
+import Update from './components/Update';
 import Header from './shared/Header';
 import Footer from './shared/Footer';
 import Contact from './components/Contact';
@@ -29,6 +30,7 @@ function App() {
         <Route path="/signup" element={<Signup user={user} setUser={setUser} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/viewrecipe" element={<ViewRecipe />} />
+        <Route path="/update/:_id" element={<Update />} />
       </Routes>
       <Footer />
     </>

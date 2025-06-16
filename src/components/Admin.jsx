@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Admin() {
   const [recipeCollection, setRecipeCollection] = useState([]);
@@ -41,7 +42,7 @@ function Admin() {
                 {recipe.name}
               </td>
               <td>
-                <button class="fa-solid fa-pen-to-square"></button>
+                <Link to={`/update/${recipe._id}`}><button class="fa-solid fa-pen-to-square"></button></Link>
               </td>
               <td>
                 <button class="fa-solid fa-trash-can"></button>
