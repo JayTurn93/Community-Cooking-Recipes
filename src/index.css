@@ -227,6 +227,27 @@ button {
     height: 500px;
 }
 
+/*Admin Page */
+td {
+    margin: auto;
+    align-items: center;
+    /* padding: 0.25em; */
+    
+}
+th {
+    border: 0.15rem solid;
+    border-color: #d36135;
+}
+tr {
+     border: 0.15rem solid;
+    border-color: #d36135;
+}
+table {
+    padding: .50em;
+    border: 0.15rem solid;
+    border-color: #d36135;
+}
+
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .smallcontainer {

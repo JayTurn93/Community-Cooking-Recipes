@@ -16,7 +16,6 @@ function Home() {
                 .catch(console.error)
     }, [API_BASE_URL])
     
-
     return (
         <div>
             <h1>Community Cooking Recipes</h1>
