@@ -33,9 +33,7 @@ function Login({user, setUser}) {
     .catch(console.error)
     
   }
-const googleLogin = (e) => {
-    fetch(`${API_BASE_URL}/auth/login/google`, {method: "GET"})
-}
+
 
     return (
         <>
