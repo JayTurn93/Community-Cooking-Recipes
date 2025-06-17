@@ -45,7 +45,7 @@ function Admin() {
                 <Link to={`/update/${recipe._id}`}><button class="fa-solid fa-pen-to-square"></button></Link>
               </td>
               <td>
-                <button class="fa-solid fa-trash-can"></button>
+                <button onClick={deleteRecipe} class="fa-solid fa-trash-can"></button>
               </td>
             </tr>
             )}

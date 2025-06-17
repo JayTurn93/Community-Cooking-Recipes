@@ -1,3 +1,4 @@
+import { GoogleLogin } from "@react-oauth/google";
 import { useState } from "react";
 import { useNavigate  } from "react-router-dom";
 
@@ -5,6 +6,7 @@ import { useNavigate  } from "react-router-dom";
 function Login({user, setUser}) {
     const [password, setPassword] = useState("");
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const myClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
     const navigate = useNavigate();
 
     // console.log("logintest", user);
@@ -31,11 +33,16 @@ function Login({user, setUser}) {
     .catch(console.error)
     
   }
+const googleLogin = (e) => {
+    fetch(`${API_BASE_URL}/auth/login/google`, {method: "GET"})
+}
+
     return (
         <>
             <h1>Community Cooking</h1>
             <div className="inputbox">
                 <h2>Account Login</h2>
+                <a href={`${API_BASE_URL}/auth/login/google`}><button>Google</button></a>
                 <div className="formarrange">
                     <form onSubmit={handleSubmitLogin}>
                         <span className="login">

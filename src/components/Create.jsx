@@ -51,7 +51,7 @@ function Create() {
       
       fetch(`${API_BASE_URL}/api/recipes/create/new`, {method: "POST"})
         .then(JSON.stringify(body))
-        .then(navigate, ("/Home"))
+        .then(navigate, ("/Admin"))
         .catch(console.error)
       
     }

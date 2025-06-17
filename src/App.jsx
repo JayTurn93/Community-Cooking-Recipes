@@ -29,7 +29,7 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/signup" element={<Signup user={user} setUser={setUser} />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/viewrecipe" element={<ViewRecipe />} />
+        <Route path="/viewrecipe/:_id" element={<ViewRecipe />} />
         <Route path="/update/:_id" element={<Update />} />
       </Routes>
       <Footer />

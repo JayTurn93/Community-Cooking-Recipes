@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // import recipes from "../data/recipes"
 
 
@@ -30,7 +31,7 @@ function Home() {
                     <ul key={recipeCollection._id}>
                         {recipeCollection.map((aRecipe) => 
                         <li>
-                            <a href="#">{aRecipe.name}</a>
+                            <Link to={`/viewrecipe/${aRecipe._id}`}>{aRecipe.name}</Link>
                         </li>
                         )}
                     </ul>
