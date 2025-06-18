@@ -2,10 +2,11 @@ import { useState } from 'react'
 import './App.css';
 import Create from './components/Create';
 import Home from './components/Home';
-import UserProfile from './components/UserProfile';
+import Admin from './components/Admin';
 import Login from './components/Login';
 import Explore from "./components/Explore";
 import Signup from './components/Signup';
+import Update from './components/Update';
 import Header from './shared/Header';
 import Footer from './shared/Footer';
 import Contact from './components/Contact';
@@ -25,10 +26,11 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/" element={<Home  />} />
         <Route path="/login" element={<Login user={user} setUser={setUser}/>} />
-        <Route path="/profile" element={<UserProfile user={user} />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/signup" element={<Signup user={user} setUser={setUser} />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/viewrecipe" element={<ViewRecipe />} />
+        <Route path="/viewrecipe/:_id" element={<ViewRecipe />} />
+        <Route path="/update/:_id" element={<Update />} />
       </Routes>
       <Footer />
     </>
