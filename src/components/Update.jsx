@@ -6,6 +6,7 @@ function Update() {
   const navigate = useNavigate(); 
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const [recipe, setRecipe] = useState({});
+  
 
   useEffect(() =>{
     fetch(`${API_BASE_URL}/api/recipes/${_id}`, {method: "GET"})
@@ -26,11 +27,13 @@ function Update() {
       instructions: e.target.instructions.value,
       notes: e.target.instructions.value
     }
-    fetch(`${API_BASE_URL}/api/recipes/update/${_id}`, {method: "PUT", body: JSON.stringify(body)})
+    console.log(body)
+    
+    fetch(`${API_BASE_URL}/api/recipes/update/${_id}`, {method: "PUT", headers: {"Content-Type":"application/json"}, body: JSON.stringify(body)})
     .then(result => console.log(result))
-    .then(data => setRecipe(data))
+    // .then(data => setRecipe(data))
     .then(navigate("/admin"))
-    .catch(error => {console.log(error)})
+    .catch(error => console.log(error))
   }
   // console.log(recipe.name, recipe.ingredients);
 

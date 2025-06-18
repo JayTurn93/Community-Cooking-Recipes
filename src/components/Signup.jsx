@@ -28,16 +28,17 @@ function Signup({user, setUser}) {
 
     const handleSubmitSignup = (e) => {
       e.preventDefault()
-      console.log("trying to",user, password, firstName, lastName);
+    //   console.log("trying to",user, password, firstName, lastName);
       const body = {
         firstName: e.target.firstName,
         lastName: e.target.lastName,
-        user: e.target.user,
+        username: e.target.user,
         password: e.target.user
       }
       JSON.stringify(body)
-      fetch(`${API_BASE_URL}/auth/register`, {method: "POST", body: JSON.stringify({body})})
+      fetch(`${API_BASE_URL}/auth/register`, {method: "POST", body: JSON.stringify(body)})
       .then(localStorage.setItem("user", JSON.stringify(user)))
+      console.log(user,password)
       .then(navigate("/admin"))
       .catch(console.error)
       
