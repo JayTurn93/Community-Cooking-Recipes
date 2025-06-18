@@ -17,6 +17,7 @@ function Update() {
   }, [API_BASE_URL, _id])
 
   const handleSubmitUpdate = (e) => {
+    e.preventDefault()
     const body = {
       name: e.target.name.value,
       prepTime: e.target.prepTime.value,
@@ -25,13 +26,13 @@ function Update() {
       instructions: e.target.instructions.value,
       notes: e.target.instructions.value
     }
-    fetch(`${API_BASE_URL}/api/recipes/update/:_id`, {method: "PUT", body: JSON.stringify(body)})
+    fetch(`${API_BASE_URL}/api/recipes/update/${_id}`, {method: "PUT", body: JSON.stringify(body)})
     .then(result => console.log(result))
     .then(data => setRecipe(data))
     .then(navigate("/admin"))
-    .catch(error => console.log(error))
+    .catch(error => {console.log(error)})
   }
-  console.log(recipe.name, recipe.ingredients);
+  // console.log(recipe.name, recipe.ingredients);
 
   return (
     <div>
@@ -40,27 +41,30 @@ function Update() {
         <form onSubmit={handleSubmitUpdate}>
           <span>
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" value={recipe.name} />
+            <input type="text" id="name" defaultValue={recipe.name} />
           </span> <br />
           <span>
             <label htmlFor="prepTime"> Prep Time</label>
-            <input type="text" id="prepTime" value={recipe.prepTime} />
+            <input type="text" id="prepTime" defaultValue={recipe.prepTime} />
           </span> <br />
           <span>
             <label htmlFor="cookTime">Cook Time</label>
-            <input type="text" id="cookTime" value={recipe.cookTime} />
+            <input type="text" id="cookTime" defaultValue={recipe.cookTime} />
           </span> <br />
           <span>
             <label htmlFor="ingredients">Ingredients</label>
-            <input type="text" id="ingredients" value={recipe.ingredients} />
+            <input type="text" id="ingredients" defaultValue={recipe.ingredients} />
           </span> <br />
           <span>
             <label htmlFor="instructions">Instructions</label>
-            <input type="text" id="instructions" value={recipe.instructions} />
+            <input type="text" id="instructions" defaultValue={recipe.instructions} />
           </span> <br />
           <span>
             <label htmlFor="notes">Notes</label>
-            <input type="text" id="notes" value={recipe.notes} />
+            <input type="text" id="notes" defaultValue={recipe.notes} />
+          </span> <br />
+          <span>
+            <button type="submit">UPDATE</button>
           </span>
         </form>
       </div>

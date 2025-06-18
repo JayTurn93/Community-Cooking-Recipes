@@ -1,4 +1,3 @@
-import { GoogleLogin } from "@react-oauth/google";
 import { useState } from "react";
 import { useNavigate  } from "react-router-dom";
 
@@ -6,7 +5,6 @@ import { useNavigate  } from "react-router-dom";
 function Login({user, setUser}) {
     const [password, setPassword] = useState("");
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-    const myClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
     const navigate = useNavigate();
 
     // console.log("logintest", user);

@@ -60,30 +60,30 @@ function Create() {
         <div>
         <h2>Create New Recipe</h2>
         <div className="bigbox">
-            <form onSubmit={handleSubmitRecipe} method="post">
+            <form onSubmit={handleSubmitRecipe} method="post" >
                 <div className="recipeinput">
                     <label htmlFor="">Recipe Name: </label>
-                    <input type="text" name="" id="" placeholder="" required  onChange={handleRecipeNameChange}/>
+                    <input type="text" name="name" id="" placeholder="" required  onChange={handleRecipeNameChange}/>
                 </div>
                 <div className="recipeinput">
                     <label htmlFor="">Prep Time: </label>
-                    <input type="text" name="" id="" placeholder="" onChange={handlePrepTimeChange}/>
+                    <input type="text" name="prepTime" id="" placeholder="" onChange={handlePrepTimeChange}/>
                 </div>
                 <div className="recipeinput">
                     <label htmlFor="recipeinput">Cook Time: </label>
-                    <input type="text" name="" id="" placeholder="" required onChange={handleCookTimeChange}/>
+                    <input type="text" name="cookTime" id="" placeholder="" required onChange={handleCookTimeChange}/>
                 </div>
                 <div className="bigtextarea">
                     <label htmlFor="">Ingredients: </label>
-                    <textarea name="" id="" rows="7" cols="75" required onChange={handleIngredientsChange}></textarea>
+                    <textarea name="ingredients" id="" rows="7" cols="75" required onChange={handleIngredientsChange}></textarea>
                 </div>
                 <div className="bigtextarea">
                     <label htmlFor="">Instructions: </label>
-                    <textarea name="" id="" rows="7" cols="75" required onChange={handleInstructionsChange}></textarea>
+                    <textarea name="instructions" id="" rows="7" cols="75" required onChange={handleInstructionsChange}></textarea>
                 </div>
                 <div className="bigtextarea">
                     <label htmlFor="">Notes: </label>
-                    <textarea name="" id="" rows="7" cols="75" onChange={handleNotesChange}></textarea>
+                    <textarea name="notes" id="" rows="7" cols="75" onChange={handleNotesChange}></textarea>
                 </div>
                 <button type="submit">Submit</button>
             </form>
