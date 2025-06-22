@@ -110,6 +110,7 @@ main{
     align-items: center;
     height: 10em;
     width: auto;
+    
 }
 .login {
     display: flex;
@@ -140,33 +141,13 @@ label {
 
 /* Login Page */
 
-.profile-img {
-    width: 5em;
-    height: 5em;
-}
-.profilearea {
-    /* justify-content: center; */
-    width: 80%;
-    height: 30rem;
-    background-color: var(--Brown);
-    margin: 3rem auto;
-    border-radius: 1rem;
+.googleButton {
     display: flex;
     flex-direction: row;
-}
-.profileleft {
+    justify-content: center;
     width: auto;
-    padding-left: 3rem;
-    display: flex;
-    flex-direction: column;
-}
-.profileright {
-    flex-direction: row;
-    width: auto;
-    padding-left: 3rem;
-}
-.aboutuser {
-    
+    height: auto;
+    margin: auto;
 }
 
 .forgotpassword {
@@ -199,8 +180,8 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     /* justify-content: center; */
-    width: 70%;
-    height: 30rem;
+    width: 10rem;
+    height: 15rem;
     background-color: var(--Brown);
     margin: 3rem auto;
     border-radius: 1rem;

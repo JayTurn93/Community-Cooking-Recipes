@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Admin() {
   const [recipeCollection, setRecipeCollection] = useState([]);
+   const {_id} = useParams();
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-  const deleteUrl = `${API_BASE_URL}/api/recipes/delete/:_id`;
+  const deleteUrl = `${API_BASE_URL}/api/recipes/delete/`;
 
   useEffect(() => {
         fetch(`${API_BASE_URL}/api/recipes`, {method: "GET"})
@@ -16,10 +18,11 @@ function Admin() {
                 .catch(console.error)
     }, [API_BASE_URL])
   console.log(recipeCollection)
+  
 
 
   const deleteRecipe = () => {
-    fetch(deleteUrl, {method: "DELETE"})
+    fetch(`${deleteUrl}${_id}`, {method: "DELETE"})
     .then(console.log("successful"))
     .catch(console.log("unsuccessful"))
   }

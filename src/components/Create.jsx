@@ -39,7 +39,6 @@ function Create() {
 
     const handleSubmitRecipe = (e) => {
       e.preventDefault()
-      console.log("trying to",recipeName, prepTime, cookTime, ingredients, instructions, notes);
       const body = {
         name: e.target.name.value,
         prepTime: e.target.prepTime.value,
