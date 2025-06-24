@@ -30,15 +30,16 @@ function Signup({user, setUser}) {
       e.preventDefault()
     //   console.log("trying to",user, password, firstName, lastName);
       const body = {
-        firstName: e.target.firstName,
-        lastName: e.target.lastName,
-        username: e.target.user,
-        password: e.target.user
+        firstName: e.target.firstName.value,
+        lastName: e.target.lastName.value,
+        username: e.target.username.value,
+        password: e.target.password.value
       }
-      JSON.stringify(body)
-      fetch(`${API_BASE_URL}/auth/register`, {method: "POST", body: JSON.stringify(body)})
+    //   JSON.stringify(body)
+      fetch(`${API_BASE_URL}/auth/register`, {method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(body)},)
+      .then(JSON.stringify(body))
       .then(localStorage.setItem("user", JSON.stringify(user)))
-      console.log(user,password)
+    //   console.log(user,password)
       .then(navigate("/admin"))
       .catch(console.error)
       
@@ -53,21 +54,21 @@ function Signup({user, setUser}) {
                 <form onSubmit={handleSubmitSignup}>
                     <span className="login">
                             <label htmlFor="firstName">First Name: </label>
-                            <input type="fistName" name="firstName" id="firstName" placeholder="firstName" onChange={handleFirstNameChange}/>
+                            <input type="fistName" name="firstName" id="firstName" placeholder="" onChange={handleFirstNameChange}/>
                         </span>
                         <span className="login">
                             <label htmlFor="lastName">Last Name: </label>
-                            <input type="lastName" name="lastName" id="lastName" placeholder="lastName" onChange={handleLastNameChange}/>
+                            <input type="lastName" name="lastName" id="lastName" placeholder="" onChange={handleLastNameChange}/>
                         </span>
                         <span className="login">
                             <label htmlFor="Email">Email: </label>
-                            <input type="email" name="email" id="email" placeholder="Email" onChange={handleUserChange}/>
+                            <input type="email" name="username" id="username" placeholder="" onChange={handleUserChange}/>
                         </span>
                         <span className="login">
                             <label htmlFor="Password">Password: </label>
-                            <input type="password" name="password" id="password" placeholder="Password" onChange={handlePasswordChange}/>
+                            <input type="password" name="password" id="password" placeholder="" onChange={handlePasswordChange}/>
                         </span>
-                        <button className="submitbutton">Submit</button>
+                        <button type="submit" className="submitbutton">Submit</button>
                     </form>
                 </div>
             </div>

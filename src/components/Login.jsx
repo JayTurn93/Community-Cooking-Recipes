@@ -7,7 +7,7 @@ function Login({user, setUser}) {
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const navigate = useNavigate();
 
-    // console.log("logintest", user);
+
 
     const handleUserChange = (e) => {
       e.preventDefault()
@@ -19,7 +19,6 @@ function Login({user, setUser}) {
   }
   const handleSubmitLogin = (e) => {
     e.preventDefault()
-    console.log("trying to",user, password);
     const body = {
         user: e.target.user,
         password: e.target.user
@@ -33,12 +32,14 @@ function Login({user, setUser}) {
   }
 
 
+
+
     return (
         <>
             <h1>Community Cooking</h1>
             <div className="inputbox">
                 <h2>Account Login</h2>
-                <a href={`${API_BASE_URL}/auth/login/google`}><button>Google</button></a>
+                <a href={`${API_BASE_URL}/auth/login/google`}><button className="googleButton">Sign In With Google</button></a>
                 <div className="formarrange">
                     <form onSubmit={handleSubmitLogin}>
                         <span className="login">
@@ -49,8 +50,8 @@ function Login({user, setUser}) {
                             <label htmlFor="Password">Password: </label>
                             <input type="password" name="password" id="password" placeholder="Password" onChange={handlePasswordChange}/>
                         </span>
-                        <div className="forgotpassword"><a href="#">Forgot password? Click here to recover account.</a></div>
-                        <button className="submitbutton" >Submit</button>
+                        <div className="login"><a href="/signup">Don't Have an Account?</a></div>
+                        <button className="login" >Submit</button>
                     </form>
                 </div>
             </div>

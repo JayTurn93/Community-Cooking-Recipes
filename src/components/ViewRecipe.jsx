@@ -22,10 +22,11 @@ function ViewRecipe() {
       <div className="bigbox">
         <div>
               <h1>{recipe.name}</h1>
-                <img className="recipePhoto" src={recipe.imageUrl} alt="Food Photo" />
-                <span><h3>Ingredients</h3>{recipe.ingredients}</span>
-                <span><h3>Instructions</h3>{recipe.instructions}</span>
-                <span><h3>Notes</h3>{recipe.notes}</span>
+              <span><h3>Prep Time</h3>{recipe.prepTime}</span>
+              <span><h3>Cook Time</h3>{recipe.cookTime}</span>
+              <span><h3>Ingredients</h3>{recipe.ingredients}</span>
+              <span><h3>Instructions</h3>{recipe.instructions}</span>
+              <span><h3>Notes</h3>{recipe.notes}</span>
         </div>
       </div>
     </div>

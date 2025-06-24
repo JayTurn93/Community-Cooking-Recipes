@@ -33,9 +33,9 @@ function Update() {
     .then(result => console.log(result))
     // .then(data => setRecipe(data))
     .then(navigate("/admin"))
-    .catch(error => console.log(error))
+    .catch(error => console.error(error))
   }
-  // console.log(recipe.name, recipe.ingredients);
+
 
   return (
     <div>
