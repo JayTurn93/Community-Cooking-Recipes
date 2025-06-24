@@ -65,8 +65,10 @@ main{
 
 .bigbox{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     justify-content: center;
+    padding: 2em;
     width: auto;
     height: auto;
     background-color: var(--Brown);
