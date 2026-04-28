@@ -8,19 +8,25 @@ function Login({user, setUser}) {
     const handleUserChange = (e) => {
       setUser(e.target.value)
     }
-  const handleSubmitLogin = (e) => {
+  const handleSubmitLogin = async (e) => {
     e.preventDefault()
     const body = {
-        email: e.target.email.value,
+        username: e.target.email.value,
         password: e.target.password.value
     }
-    fetch(`${API_BASE_URL}/auth/login/local`, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)})
-    .then(() => {
-      localStorage.setItem("user", JSON.stringify(user))
+    try {
+      const response = await fetch(`${API_BASE_URL}/auth/login/local`, {method: "POST", headers: {"Content-Type": "application/json"}, credentials: "include", body: JSON.stringify(body)})
+      if (!response.ok) {
+        const data = await response.json()
+        alert(data.error?.message || "Login failed. Please try again.")
+        return
+      }
+      const data = await response.json()
+      localStorage.setItem("user", JSON.stringify(data.data?.user))
       navigate("/admin")
-    })
-    .catch(console.error)
-    
+    } catch (error) {
+      console.error(error)
+    }
   }
 
 
