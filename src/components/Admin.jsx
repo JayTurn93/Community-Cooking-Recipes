@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Admin() {
   const [recipeCollection, setRecipeCollection] = useState([]);
-  const { _id } = useParams();
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-  const deleteUrl = `${API_BASE_URL}/api/recipes/delete/`;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,16 +16,15 @@ function Admin() {
       })
       .catch(console.error);
   }, [API_BASE_URL]);
-  console.log(recipeCollection);
 
-  const deleteRecipe = () => {
-    fetch(`${deleteUrl}${_id}`, { method: "DELETE" })
-      .then(console.log("successful"))
-      .catch(console.log("unsuccessful"));
+  const deleteRecipe = (id) => {
+    fetch(`${API_BASE_URL}/api/recipes/delete/${id}`, { method: "DELETE" })
+      .then(() => console.log("successful"))
+      .catch(() => console.log("unsuccessful"));
   };
-    const handleLogout = (e) => {
+  const handleLogout = () => {
     fetch(`${API_BASE_URL}/auth/logout`, {method: "GET"})
-    .then(navigate("/"))
+    .then(() => navigate("/"))
     .catch(console.error)
   }
 
@@ -38,7 +34,7 @@ function Admin() {
       <div className="bigbox">
         <span>
           <Link to="/create">
-            <button>PREARE NEW MEAL</button>
+            <button>PREPARE NEW MEAL</button>
           </Link>
         </span>
         <table>
@@ -55,13 +51,14 @@ function Admin() {
                 <td>{recipe.name}</td>
                 <td>
                   <Link to={`/update/${recipe._id}`}>
-                    <button class="fa-solid fa-pen-to-square"></button>
+                    <button className="fa-solid fa-pen-to-square" aria-label="Edit recipe"></button>
                   </Link>
                 </td>
                 <td>
                   <button
-                    onClick={deleteRecipe}
-                    class="fa-solid fa-trash-can"
+                    onClick={() => deleteRecipe(recipe._id)}
+                    className="fa-solid fa-trash-can"
+                    aria-label="Delete recipe"
                   ></button>
                 </td>
               </tr>

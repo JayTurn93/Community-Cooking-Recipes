@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 
 function Explore() {
-    const [ingredient, setIngredient] = useState([""]);
+    const [ingredient, setIngredient] = useState("");
     const [recipes, setRecipes] = useState([]);
-    const [foundRecipes, setFoundRecipes] = useState("");
+    const [foundRecipes, setFoundRecipes] = useState([]);
      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
@@ -47,14 +47,16 @@ function Explore() {
                 <div className="smallrectangle">
                     <h2>Recipe Results</h2>
                     <div className="recipe-results">
-                        {foundRecipes && foundRecipes.length > 0 ? (
-                          foundRecipes.map((recipe) =>(
-                            <ul key={recipe._id} className="recipe">
-                                <span className="recipe-name">
-                                    <Link to={`/viewrecipe/${recipe._id}`}>{recipe.name}</Link>
-                                </span>
-                            </ul>
-                          ))
+                        {foundRecipes.length > 0 ? (
+                          <ul>
+                            {foundRecipes.map((recipe) => (
+                              <li key={recipe._id} className="recipe">
+                                  <span className="recipe-name">
+                                      <Link to={`/viewrecipe/${recipe._id}`}>{recipe.name}</Link>
+                                  </span>
+                              </li>
+                            ))}
+                          </ul>
                         ) : (
                             <p>Nothing Cooking Here</p>
                         )}
@@ -62,12 +64,13 @@ function Explore() {
                 </div>
                 <div className="smallrectangle">
                         <h2>Other Ideas</h2>
-                        <ul key={recipes._id}>{recipes.map((recipe) =>
-                         <li>
-                            <Link to={`/viewrecipe/${recipe._id}`}>{recipe.name}</Link>
-                         </li>
-                         )}
-                         </ul>
+                        <ul>
+                          {recipes.map((recipe) => (
+                            <li key={recipe._id}>
+                              <Link to={`/viewrecipe/${recipe._id}`}>{recipe.name}</Link>
+                            </li>
+                          ))}
+                        </ul>
                     </div>
                 </div>
         </div>

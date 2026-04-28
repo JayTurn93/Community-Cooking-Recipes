@@ -10,7 +10,7 @@ function Footer() {
                         <Link to="/"><i className="fa-solid fa-house-chimney fa-2xl"></i></Link>
                     </div>
                     <div className="icon">
-                        <Link to="Contact"><i className="fa-solid fa-envelope fa-2xl"></i></Link>
+                        <Link to="/contact"><i className="fa-solid fa-envelope fa-2xl"></i></Link>
                     </div>
                 </div>
                 <div className="largefoot">

@@ -1,41 +1,8 @@
-import { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
-
     const navigate = useNavigate()
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-    const [recipeName, setRecipeName] = useState("");
-    const [prepTime, setPrepTime] = useState("");
-    const [cookTime, setCookTime] = useState("");
-    const [ingredients, setIngredients] = useState("");
-    const [instructions, setInstructions] = useState("");
-    const [notes, setNotes] = useState("");
-
-    const handleRecipeNameChange = (e) => {
-        e.preventDefault();
-        setRecipeName(e.target.value);
-    }
-    const handlePrepTimeChange = (e) => {
-        e.preventDefault()
-        setPrepTime(e.target.value)
-    }
-    const handleCookTimeChange = (e) => {
-        e.preventDefault()
-        setCookTime(e.target.value)
-    }
-    const handleIngredientsChange = (e) => {
-      e.preventDefault()
-      setIngredients(e.target.value)
-    }
-    const handleInstructionsChange = (e) => {
-        e.preventDefault()
-        setInstructions(e.target.value)
-    }
-    const handleNotesChange = (e) => {
-        e.preventDefault()
-        setNotes(e.target.value)
-    }
 
     const handleSubmitRecipe = (e) => {
       e.preventDefault()
@@ -47,42 +14,39 @@ function Create() {
         instructions: e.target.instructions.value,
         notes: e.target.notes.value
       }
-      
-      fetch(`${API_BASE_URL}/api/recipes/create/new`, {method: "POST"})
-        .then(JSON.stringify(body))
-        .then(navigate, ("/Admin"))
+      fetch(`${API_BASE_URL}/api/recipes/create/new`, {method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(body)})
+        .then(() => navigate("/admin"))
         .catch(console.error)
-      
     }
 
     return (
         <div>
         <h2>Create New Recipe</h2>
         <div className="bigbox">
-            <form onSubmit={handleSubmitRecipe} method="post" >
+            <form onSubmit={handleSubmitRecipe}>
                 <div className="recipeinput">
-                    <label htmlFor="">Recipe Name: </label>
-                    <input type="text" name="name" id="" placeholder="" required  onChange={handleRecipeNameChange}/>
-                </div>
-                <div className="recipeinput">
-                    <label htmlFor="">Prep Time: </label>
-                    <input type="text" name="prepTime" id="" placeholder="" onChange={handlePrepTimeChange}/>
+                    <label htmlFor="name">Recipe Name: </label>
+                    <input type="text" name="name" id="name" required />
                 </div>
                 <div className="recipeinput">
-                    <label htmlFor="recipeinput">Cook Time: </label>
-                    <input type="text" name="cookTime" id="" placeholder="" required onChange={handleCookTimeChange}/>
+                    <label htmlFor="prepTime">Prep Time: </label>
+                    <input type="text" name="prepTime" id="prepTime" />
+                </div>
+                <div className="recipeinput">
+                    <label htmlFor="cookTime">Cook Time: </label>
+                    <input type="text" name="cookTime" id="cookTime" required />
                 </div>
                 <div className="bigtextarea">
-                    <label htmlFor="">Ingredients: </label>
-                    <textarea name="ingredients" id="" rows="7" cols="75" required onChange={handleIngredientsChange}></textarea>
+                    <label htmlFor="ingredients">Ingredients: </label>
+                    <textarea name="ingredients" id="ingredients" rows="7" cols="75" required></textarea>
                 </div>
                 <div className="bigtextarea">
-                    <label htmlFor="">Instructions: </label>
-                    <textarea name="instructions" id="" rows="7" cols="75" required onChange={handleInstructionsChange}></textarea>
+                    <label htmlFor="instructions">Instructions: </label>
+                    <textarea name="instructions" id="instructions" rows="7" cols="75" required></textarea>
                 </div>
                 <div className="bigtextarea">
-                    <label htmlFor="">Notes: </label>
-                    <textarea name="notes" id="" rows="7" cols="75" onChange={handleNotesChange}></textarea>
+                    <label htmlFor="notes">Notes: </label>
+                    <textarea name="notes" id="notes" rows="7" cols="75"></textarea>
                 </div>
                 <button type="submit">Submit</button>
             </form>
