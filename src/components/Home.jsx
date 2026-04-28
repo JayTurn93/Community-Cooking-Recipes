@@ -26,14 +26,14 @@ function Home() {
         <div>
           <p>
             Welcome to Community Cooking Recipes. Here all the recipes are user
-            creted, tested, and approved. Check out whats new below! Sign up to
+            created, tested, and approved. Check out whats new below! Sign up to
             show us your skills.
           </p>
         </div>
         <span>
-          <ul key={recipeCollection._id}>
+          <ul>
             {recipeCollection.map((aRecipe) => (
-              <li>
+              <li key={aRecipe._id}>
                 <Link to={`/viewrecipe/${aRecipe._id}`}>{aRecipe.name}</Link>
               </li>
             ))}
@@ -43,9 +43,9 @@ function Home() {
       <div className="smallcontainer">
         <div className="smallrectangle">
           <h2>Most Discussed</h2>
-          <ul key={recipeCollection._id}>
+          <ul>
             {recipeCollection.map((aRecipe) => (
-              <li>
+              <li key={aRecipe._id}>
                 <a href="#">{aRecipe.name}</a>
               </li>
             ))}
@@ -53,9 +53,9 @@ function Home() {
         </div>
         <div className="smallrectangle">
           <h2>Hall of Fame</h2>
-          <ul key={recipeCollection._id}>
+          <ul>
             {recipeCollection.map((aRecipe) => (
-              <li>
+              <li key={aRecipe._id}>
                 <a href="#">{aRecipe.name}</a>
               </li>
             ))}

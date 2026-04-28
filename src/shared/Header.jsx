@@ -4,15 +4,15 @@ function Header() {
     return (
         <div>
             <nav>
-                <div class="smallnav">
-                    <div class="icon"><Link to="/"><i class="fa-solid fa-house-chimney fa-2xl"></i></Link></div>
-                    <div class="icon"><Link to="Login"><i class="fa-solid fa-user fa-2xl"></i></Link></div>
-                    <div class="icon"><Link to="Explore"><i class="fa-solid fa-fire-burner fa-2xl"></i></Link></div>
+                <div className="smallnav">
+                    <div className="icon"><Link to="/"><i className="fa-solid fa-house-chimney fa-2xl"></i></Link></div>
+                    <div className="icon"><Link to="/login"><i className="fa-solid fa-user fa-2xl"></i></Link></div>
+                    <div className="icon"><Link to="/explore"><i className="fa-solid fa-fire-burner fa-2xl"></i></Link></div>
                 </div>
                 <div className="theicons">
                     <Link to="/">Home </Link>
-                    <Link to="Login">Account </Link>
-                    <Link to="Explore">Search Recipes </Link>
+                    <Link to="/login">Account </Link>
+                    <Link to="/explore">Search Recipes </Link>
                 </div>
             </nav>
         </div>
